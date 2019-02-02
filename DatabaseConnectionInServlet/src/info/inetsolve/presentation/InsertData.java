@@ -44,8 +44,8 @@ public class InsertData extends HttpServlet {
 
 			RegistrationDetails regDetails = new RegistrationDetails();
 
-			regDetails.setStudentName(studentName);
 			regDetails.setDob(dob);
+			regDetails.setStudentName(studentName);
 			regDetails.setEmail(email);
 			regDetails.setPassword(password);
 			
