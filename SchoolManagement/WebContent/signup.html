@@ -20,6 +20,34 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
+
+<script type="text/javascript">
+ function validate() {
+            var name = document.getElementById("studentname").value;
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("pwd").value;
+            var confpass = document.getElementById("cnfpwd").value;
+
+             console.log("name:", studentname, " email: ", email, " pass:", pwd);
+ 
+            if (name.length <= 0) {
+                alert("Please enter valid username: ");
+                return false;
+            }  else if (email.length <= 0) {
+                alert("Please enter valid email: ");
+                return false;
+            }
+            else if (pass.length <= 0) {
+                alert("Please enter valid passward: ");
+                return false;
+            } else if (pass !== confpass) {
+                alert("Please enter valid passward: ")
+                return false;
+            } 
+            return true;
+ }
+
+</script>
 </head>
 
 <body>
@@ -31,22 +59,22 @@
 	</div>
 
 
-	<form action="insert" method="POST">
+	<form onsubmit="return validate();" action="insert" method="POST">
 		<div class="container">
 
 
 			<div class="col-sm-offset-3 col-sm-6">
 				<div class="form-group">
-					<label class="control-label col-sm-6" for="student name">Student
-						Name:</label>
+					<label class="control-label col-sm-6">Student Name:</label>
 					<div class="col-sm-6">
-						<input type="text" class="form-control" id="student name"
-							placeholder="Enter student name" name="studentname">
+						<input type="text" value="" class="form-control" id="studentname"
+							placeholder="Enter student name" name="studentname"> <span
+							id="studentname"></span>
 					</div>
 				</div>
 
 				<div class="form-group">
-					<label class="control-label col-sm-6" for="email">Email:</label>
+					<label class="control-label col-sm-6">Email:</label>
 					<div class="col-sm-6">
 						<input type="email" class="form-control" id="email"
 							placeholder="Enter email" name="email">
@@ -54,8 +82,7 @@
 				</div>
 
 				<div class="form-group">
-					<label class="control-label col-sm-6" for="dob">Date Of
-						Birth:</label>
+					<label class="control-label col-sm-6">Date Of Birth:</label>
 					<div class="col-sm-6">
 						<input type="date" class="form-control" id="dob"
 							placeholder="Enter date of birth" name="dob">
@@ -64,7 +91,7 @@
 
 
 				<div class="form-group">
-					<label class="control-label col-sm-6" for="pwd">Password:</label>
+					<label class="control-label col-sm-6">Password:</label>
 					<div class="col-sm-6">
 						<input type="password" class="form-control" id="pwd"
 							placeholder="Enter password" name="pwd">
@@ -72,8 +99,7 @@
 				</div>
 
 				<div class="form-group">
-					<label class="control-label col-sm-6" for="pwd">Confirm
-						Password:</label>
+					<label class="control-label col-sm-6">Confirm Password:</label>
 					<div class="col-sm-6">
 						<input type="password" class="form-control" id="cnf-pwd"
 							placeholder="Enter confirm password" name="cnfpwd">
@@ -83,9 +109,9 @@
 				<div class="form-group">
 
 					<div class="col-sm-offset-6 col-sm-6">
-						<button type="submit" class="btn btn-primary">Submit</button>
+						<button type="submit" class="btn btn-primary" onclick="clickMe()">Submit</button>
 
-							 
+
 					</div>
 				</div>
 			</div>
@@ -96,6 +122,37 @@
 	<div class="footer"></div>
 
 
+	<!-- <script type="text/javascript">
+	
+			function validate() {
+				
+				var correct = /^[A-Za-z]+$/;
+				
+				var a = document.getElementById("studentname").value;
+				
+				if(a==0) {
+					//alert("Please enter name");
+					document.getElementById(studentname).innerHTML=" ** Please feel student name";
+					return false;
+				}
+				if(a.length < 3) {
+					document.getElementById(studentname).innerHTML=" ** student name must be three character";
+					return false;
+				}
+				if(a.match(correct))
+					true;
+				else {
+					document.getElementById(studentname).innerHTML=" ** Only alphabets are allowed";
+					return false;
+				}
+				
+			}
+	</script>
+	 -->
+
+
+
 </body>
+
 
 </html>
