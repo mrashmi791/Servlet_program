@@ -22,31 +22,54 @@
 
 
 <script type="text/javascript">
- function validate() {
-            var name = document.getElementById("studentname").value;
-            var email = document.getElementById("email").value;
-            var pass = document.getElementById("pwd").value;
-            var confpass = document.getElementById("cnfpwd").value;
+	function validate() {
+		var name = document.getElementById("studentname").value;
+		var email = document.getElementById("email").value;
+		var pass = document.getElementById("pwd").value;
+		var confpass = document.getElementById("cnfpwd").value;
+		//document.getElementById("studentname-msg").innerHtml = "";
+		console.log("name:", name, " email: ", email, "pass:",pass,"cnfpass: ", confpass);
 
-             console.log("name:", studentname, " email: ", email, " pass:", pwd);
- 
-            if (name.length <= 0) {
-                alert("Please enter valid username: ");
-                return false;
-            }  else if (email.length <= 0) {
-                alert("Please enter valid email: ");
-                return false;
-            }
-            else if (pass.length <= 0) {
-                alert("Please enter valid passward: ");
-                return false;
-            } else if (pass !== confpass) {
-                alert("Please enter valid passward: ")
-                return false;
-            } 
-            return true;
- }
-
+		if (name.length <= 0) {
+			//alert("Please enter valid username: ");
+			document.getElementById("warning-msg-studentname").style.display = "block";
+			return false;
+		} else if (email.length <= 0) {
+			//alert("Please enter valid email: ");
+			document.getElementById("warning-msg-email").style.display = "block";
+			return false;
+		} else if (pass.length <= 0) {
+			//alert("Please enter valid passward: ");
+			document.getElementById("warning-msg-pwd").style.display = "block";
+			return false;
+		} else if (pass !== confpass) {
+			//alert("Please enter valid passward: ")
+			
+			document.getElementById("warning-msg-cnfpwd").style.display = "block";
+			return false;
+		}
+		return true;
+	}
+	
+	function checkInputLen(element) {
+		console.log("id: ", element.id);
+		var name = document.getElementById("" + element.id).value;
+		
+		if (name.length <= 0) {
+			//alert("Please enter valid username: ");
+			document.getElementById("warning-msg-" + element.id).style.display = "block";
+		} else {
+			document.getElementById("warning-msg-" + element.id).style.display = "none";
+		}
+		
+		if(element.id === "cnfpwd") {
+			var pass = document.getElementById("pwd").value;
+			var confpass = document.getElementById("cnfpwd").value;
+			if(pass !== confpass) {
+				document.getElementById("warning-msg-" + element.id).style.display = "block";
+			}
+		}
+	}
 </script>
 </head>
 
@@ -68,8 +91,8 @@
 					<label class="control-label col-sm-6">Student Name:</label>
 					<div class="col-sm-6">
 						<input type="text" value="" class="form-control" id="studentname"
-							placeholder="Enter student name" name="studentname"> <span
-							id="studentname"></span>
+							placeholder="Enter student name" name="studentname" onkeyup="checkInputLen(this)"> 
+							<span class="warning-msg" id="warning-msg-studentname">Invalid user name!!</span>
 					</div>
 				</div>
 
@@ -77,7 +100,8 @@
 					<label class="control-label col-sm-6">Email:</label>
 					<div class="col-sm-6">
 						<input type="email" class="form-control" id="email"
-							placeholder="Enter email" name="email">
+							placeholder="Enter email" name="email" onkeyup="checkInputLen(this)"> 
+							<span class="warning-msg" id="warning-msg-email">Invalid email..!!</span>
 					</div>
 				</div>
 
@@ -94,23 +118,25 @@
 					<label class="control-label col-sm-6">Password:</label>
 					<div class="col-sm-6">
 						<input type="password" class="form-control" id="pwd"
-							placeholder="Enter password" name="pwd">
+							placeholder="Enter password" name="pwd" onkeyup="checkInputLen(this)"> 
+							<span class="warning-msg" id="warning-msg-pwd">Invalid password..!!</span>
 					</div>
 				</div>
 
 				<div class="form-group">
 					<label class="control-label col-sm-6">Confirm Password:</label>
 					<div class="col-sm-6">
-						<input type="password" class="form-control" id="cnf-pwd"
-							placeholder="Enter confirm password" name="cnfpwd">
+						<input type="password" class="form-control" id="cnfpwd"
+							placeholder="Enter confirm password" name="cnfpwd" onkeyup="checkInputLen(this)"> 
+							<span class="warning-msg" id="warning-msg-cnfpwd">Password didn't matched!!</span>
 					</div>
 				</div>
 
 				<div class="form-group">
 
 					<div class="col-sm-offset-6 col-sm-6">
-						<button type="submit" class="btn btn-primary" onclick="clickMe()">Submit</button>
-
+						<button type="submit" class="btn btn-primary">Submit</button>
+							<button type="submit" class="btn btn-info">Back</button>
 
 					</div>
 				</div>

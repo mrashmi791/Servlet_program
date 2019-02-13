@@ -1,0 +1,52 @@
+@charset "ISO-8859-1";
+
+html,body {
+    min-height: 100px;
+}
+.container {
+    min-height: 100px;
+   // margin-top: 30px;
+    font-size: 25px;
+    margin:0px;
+    padding:0px;
+}
+
+.footer {
+    background-color:  #45b1cb;
+    position: relative;
+    height: auto;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    padding: 50px;
+    
+}
+
+.menu {
+	padding-top: 50px;
+}
+
+footer-nav {
+    /* margin-left: 70px; */
+    text-align:  right;
+    list-style: none;
+}
+
+.form-group {
+    padding-bottom: 30px;
+
+}
+
+
+.header {
+    height: 105px;
+    background-color: #45b1cb;
+}
+
+
+.logo {
+	margin-bottom: 11px !important;
+    margin-left: 15px !important;
+    padding-top: 7px !important;
+    height: 100px !important;
+}

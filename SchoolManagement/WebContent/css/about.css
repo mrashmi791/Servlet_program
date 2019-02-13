@@ -1,0 +1,30 @@
+@charset "ISO-8859-1";
+
+ .container {
+    /* max-width: 500px; */
+    margin: auto; 
+    background: white;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .header {
+  height: 90px;;
+  text-align: center;
+
+  background-color:  #45b1cb;
+}
+
+.header h1 {
+  padding-top: 20px;
+  margin: 0px;
+}
+
+body {
+    background: #555;
+  }
+  
+   .carousel-inner {
+      height: 700px;
+  }
+  

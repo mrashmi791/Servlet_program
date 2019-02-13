@@ -1,0 +1,29 @@
+@charset "ISO-8859-1";
+
+ .header {
+  height: 90px;;
+  text-align: center;
+
+  background-color:  #45b1cb;
+}
+
+.header h1 {
+  padding-top: 20px;
+  margin: 0px;
+}
+
+
+
+
+.details {
+   
+    padding:30pxpx;
+}
+
+.form-group {
+    padding-bottom: 30px !important;
+    margin-bottom: 30px  !important;
+
+}
+
+

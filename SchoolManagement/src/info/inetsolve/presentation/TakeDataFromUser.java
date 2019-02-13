@@ -74,7 +74,9 @@ public class TakeDataFromUser extends HttpServlet {
 						out.println("<script>");
 						out.println("$(document).ready(function() {");
 						out.println("swal ( 'Welcome' ,  'Successfull...!!!' ,  'success' );");
+						
 						out.println("});");
+						
 						out.println("</script>");
 						
 						response.sendRedirect("./signin.html");

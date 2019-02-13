@@ -1,0 +1,53 @@
+@charset "ISO-8859-1";
+
+.header {
+    height: 105px;
+    background-color: #45b1cb;
+}
+
+
+.logo {
+	margin-bottom: 11px !important;
+    margin-left: 15px !important;
+    padding-top: 7px !important;
+    height: 100px !important;
+}
+
+
+html,body {
+    min-height: 100px;
+}
+
+.menu {
+	padding-top: 50px;
+}
+
+.content {
+	padding-top:40px;
+	padding-left:30px;
+}
+
+.container {
+    min-height: 100px;
+   // margin-top: 30px;
+    font-size: 25px;
+    margin:0px;
+    padding:0px;
+}
+
+ .footer {
+    background-color:  #45b1cb;
+    position: absolute;
+    height: auto;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    padding: 0px !important;
+    
+   
+}
+
+.details p{
+	font-size: 10px:
+}
+
