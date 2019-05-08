@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app>
+	<servlet>
+
+		<servlet-name>hs</servlet-name>
+		<servlet-class>info.inetsolve.HelloServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>hs</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+
+
+	<context-param>
+		<param-name>id</param-name>
+		<param-value>123</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>name</param-name>
+		<param-value>ram</param-value>
+	</context-param>
+
+	<servlet>
+
+		<servlet-name>first</servlet-name>
+		<servlet-class>info.inetsolve.ServletContext.FirstServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>first</servlet-name>
+		<url-pattern>/first</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+
+		<servlet-name>second</servlet-name>
+		<servlet-class>info.inetsolve.ServletContext.SecondServlet
+		</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>second</servlet-name>
+		<url-pattern>/second</url-pattern>
+	</servlet-mapping>
+</web-app>

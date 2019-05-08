@@ -5,25 +5,13 @@ html,body {
 }
 .container {
     min-height: 100px;
-   // margin-top: 30px;
-    font-size: 25px;
     margin:0px;
     padding:0px;
 }
 
-.footer {
-    background-color:  #45b1cb;
-    position: relative;
-    height: auto;
-    color: #fff;
-    bottom: 0;
-    width: 100%;
-    padding: 50px;
-    
-}
 
 .menu {
-	padding-top: 50px;
+	padding-top: 25px;
 }
 
 footer-nav {
@@ -37,10 +25,14 @@ footer-nav {
 
 }
 
+.font {
+	font-size:25px;
+}
+
 
 .header {
     height: 105px;
-    background-color: #45b1cb;
+    background-color: #45b1cb !important;
 }
 
 
@@ -49,4 +41,29 @@ footer-nav {
     margin-left: 15px !important;
     padding-top: 7px !important;
     height: 100px !important;
+}
+
+.text-center {
+	font-size:45px !important;
+	padding-top:15px;
+}
+
+
+
+
+
+ .footer {
+   background-color:  #45b1cb;
+    position: absolute;
+    height: auto;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    padding: 0px !important;
+    
+  
+}
+
+.details p {
+	font-size: 10px !important:
 }

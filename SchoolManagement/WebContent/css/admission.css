@@ -19,7 +19,7 @@ html,body {
 }
 
 .menu {
-	padding-top: 50px;
+	padding-top: 25px;
 }
 
 .content {
@@ -29,8 +29,6 @@ html,body {
 
 .container {
     min-height: 100px;
-   // margin-top: 30px;
-    font-size: 25px;
     margin:0px;
     padding:0px;
 }
@@ -47,7 +45,8 @@ html,body {
    
 }
 
-.details p{
-	font-size: 10px:
+.details p {
+	font-size: 10px !important:
 }
+
 

@@ -1,14 +1,6 @@
 @charset "ISO-8859-1";
 
- .container {
-    /* max-width: 500px; */
-    margin: auto; 
-    background: white;
-    padding: 10px;
-    font-size: 20px;
-  }
-
-  .header {
+.header {
   height: 90px;;
   text-align: center;
 
@@ -18,13 +10,59 @@
 .header h1 {
   padding-top: 20px;
   margin: 0px;
-}
+} */
 
 body {
     background: #555;
   }
   
+  
+.menu {
+	padding-top: 25px;
+}
+  
    .carousel-inner {
       height: 700px;
   }
   
+  .container {
+    min-height: 100px;
+  	 margin-top: 30px;
+    font-size: 25px;
+    margin:0px;
+    padding:0px;
+} 
+
+ .footer {
+    background-color:  #45b1cb !important;
+    height: auto;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    padding: 0px !important;
+    
+   
+}
+
+
+.row {
+	margin: 0px !important;
+	padding: 0px !important;
+}
+
+.details p {
+	font-size: 10px:
+}
+
+  .header {
+    height: 105px;
+    background-color: #45b1cb;
+}
+
+
+.logo {
+	margin-bottom: 11px !important;
+    margin-right: 400px !important; 
+    padding-top: 7px !important;
+    height: 100px !important;
+}

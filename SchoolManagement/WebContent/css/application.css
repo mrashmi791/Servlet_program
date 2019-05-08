@@ -16,13 +16,12 @@
 
 
 .details {
-   
-    padding:30pxpx;
+    padding:30px;
 }
 
 .form-group {
-    padding-bottom: 30px !important;
-    margin-bottom: 30px  !important;
+    padding-bottom: 20px !important;
+    margin-top: 20px !important;
 
 }
 
